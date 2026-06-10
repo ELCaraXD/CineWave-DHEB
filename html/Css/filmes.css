@@ -1,0 +1,358 @@
+            @font-face {
+                font-family: 'Decohead'; 
+                src: url('../fonts/DecoheadFREE.otf') format('opentype'); 
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Aliens'; 
+                src: url('../fonts/AliensAmongUs.otf') format('opentype');  
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+            body{
+
+                height: 1366px;
+                
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+
+
+                background-color: black;
+                font-size: large;
+
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            #voltar{
+                position: absolute;
+                left: 1%;
+                top: 1%;
+                font-family: 'Decohead';
+                font-size: xx-large;
+                text-align: center;
+
+                background-image: url('../imgGe/Voltar.svg');
+                background-size: 15%;
+                background-repeat: no-repeat;
+                background-position: left;
+
+                width: 120px;  
+                height: 35px;
+                border-radius: 0px 0px 10px 0px;
+
+                color: gray;
+                background-color: transparent; 
+
+                transition: width 1s,height 1s,font-size 1s;
+                 
+            }
+            #voltar:hover{
+                width: 140px;
+                height: 55px;
+                font-size: 50px;
+            }
+
+            #Status{
+                position: absolute;
+                left: 38.5%;
+                top: 7%;
+
+                font-family: 'Decohead';
+
+                width: 60%;
+                height: 7%;
+
+                background-color: transparent   ;
+                color: white;
+            }
+
+            #Nome{
+                position: absolute;
+                left: 39%;
+                top: 13%;
+                
+                font-family: 'Aliens', 'DecoHead';
+                font-size: 220%;
+                white-space: nowrap;
+                overflow: visible;
+
+                width: 60%;  
+                height: 7%;
+
+                background-color: transparent;
+                color: white;
+            }
+            #Nav{
+                position: absolute;
+                left: 39%;
+                top: 21%;
+
+                font-family: 'Aliens', 'DecoHead';
+                font-size: 100%;
+
+                width: 60%;  
+                height: 8%;
+
+                background-color: transparent;
+                color: white;
+            }
+
+            #sino{
+                font-family: 'DecoHead';
+                font-size: 120%;
+
+                position: absolute;
+                z-index: 4;
+                left: 39%;
+                top: 28%;
+
+                width: 60%;
+                height: 20%;
+                border-radius: 10px;
+
+                background-color: transparent;
+                color: white;
+
+                backdrop-filter: blur(5px);
+            }
+
+            #elen{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                font-family: 'Decohead';
+                font-size: 150%;
+
+                position: absolute;
+                z-index: 3;
+                left: 39%;
+                top: 28%;
+
+                width: 60%;
+                height: 25%;
+
+                background-color: transparent;
+                color: white;
+            }
+                #moldElen{
+                    width: 20%;
+                    height: 30%;
+
+                    border: 5px;
+                    border-color: black;
+                    border-style: hidden hidden solid hidden;
+                    border-radius: 4px;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    color: black;
+
+                    transition: height ease 1s, color ease 1s, border-color ease 1s;
+                }
+
+                #moldElen:hover{
+                    width: 20%;
+                    height: 160%;
+
+                    border: 5px;
+                    border-color: yellow;
+                    border-style: hidden hidden solid hidden;
+                    border-radius: 4px;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    color: yellow;
+                }
+
+            #gale{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                font-family: 'Decohead';
+                font-size: 150%;
+
+                position: absolute;
+                z-index: 2;
+                left: 39%;
+                top: 28%;
+
+                width: 57%;
+                height: 27%;
+
+                background-color: transparent;
+                color: white;
+            }
+                #moldGal{
+                    width: 95%;
+                    height: 51%;
+
+                    border: 1px;
+                    border-color: yellow;
+                    border-radius: 10px;
+                    border-style: solid;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position-y: -160px;
+
+                    background-color: transparent;
+                    color: white;
+
+                    filter:brightness(40%);
+                    transition: filter 1s;
+                }
+                #moldGal:hover{
+                    filter: brightness(120%);
+                }
+
+                #moldGal1{
+                    width: 28%;
+                    height: 100%;
+
+                    border: 1px;
+                    border-color: yellow;
+                    border-radius: 15px;
+                    border-style: solid;
+
+                    margin-top: 10px;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    background-color: transparent;
+                    color: white;
+
+                    filter:brightness(40%);
+                    transition: filter 1s;
+                }
+                #moldGal1:hover{
+                    filter:brightness(120%);
+                }
+                
+
+            #info{
+                font-family: 'Decohead';
+                font-size: 150%;
+
+                position: absolute;
+                z-index: 1;
+                left: 39%;
+                top: 28%;
+
+                width: 60%;
+                height: 25%;
+
+                background-color: transparent;
+                color: white;
+
+                backdrop-filter: blur(5px);
+            }
+
+            #botComp{
+                position: absolute;
+                left: 42%;
+                top: 72%;
+                z-index: 20;
+
+                border-radius: 10px;
+                background-color: transparent;
+
+                width: 15%;
+                height: 6%;
+
+                background-image: url('../imgGe/botCom.svg');
+                background-size: 130%;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                transition: width 1s,height 1s,left 1s,top 1s;
+            }
+            #botComp:hover{
+                left: 42%;
+                top: 72%;
+
+                width: 17%;
+                height: 7%;
+            }
+
+            #botCar{
+                position: absolute;
+                left: 42%;
+                top: 80%;
+                z-index: 20;
+                
+                border-radius: 10px;
+                background-color: transparent;
+
+                width: 15%;
+                height: 6%;
+
+                background-image: url('../imgGe/botCar.svg');
+                background-size: 130%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: transparent;
+                
+                transition: width 1s,height 1s,left 1s,top 1s;
+            }
+            #botCar:hover{
+                left: 42%;
+                top: 80%;
+
+                width: 17%;
+                height: 7%;
+            }
+
+
+                h2, p {
+                    margin: 5px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: transparent;
+                }
+
+                ul li {
+                    float: left;
+                    
+                }
+
+                ul li:last-child {
+                    border-right: none;
+                }
+
+                ul li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 20px;
+                    text-decoration: none;
+                    transition: 1s ease;
+                }
+
+                ul li a:hover:not(.active) {
+                    font-size: 120%;
+                    color: yellow;
+                }
+                ul li .active {
+                    font-size: 120%;
+                    color: yellow;
+                }

@@ -1,0 +1,149 @@
+            @font-face {
+                font-family: 'Decohead'; 
+                src: url('../fonts/DecoheadFREE.otf') format('opentype'); 
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Aliens'; 
+                src: url('../fonts/AliensAmongUs.otf') format('opentype');  
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body{
+                font-family: 'Aliens';
+
+                height: 1366px;
+
+                background-image: url('../imgGe/backlo.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                
+                color: black;
+                margin: 0;
+            }
+            #login{
+                position: absolute;
+                top: 7%;
+                right: 5%;
+
+                font-size: 23px;
+                
+                border: 8px;
+                border-color: black;
+                border-style: double;
+                border-radius: 40px;
+
+                box-shadow: 5px 5px 10px black;
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+                width: 20%;
+                height: 55%;
+                
+                background-color: transparent;
+
+            }
+            .bot{
+                font-family: 'Decohead';
+                font-size: 30px;
+
+                width: 50%;
+                height: 15%;
+
+                border: 3px;
+                border-color: black;
+                border-radius: 0px 10px 10px 0px;
+                border-style: hidden hidden hidden solid;
+
+                background-color: transparent;
+                box-shadow: 3px 3px 7px black;
+
+                margin-top: 5%;
+
+                transition: width 1s;
+            }
+            .bot:hover{
+                width: 80%;
+            }
+            input[type=text] {
+                font-size: 15px;
+
+                width: 40%;
+                height: 20%;
+
+                padding: 12px;
+                
+                margin: 8px 0;
+
+                box-shadow: 2px 2px 5px black;
+                
+                display: inline-block;
+                
+                border: 3px;
+                border-style: hidden hidden hidden solid;
+                border-color: black;
+                border-radius: 3px;
+                
+                box-sizing: border-box;
+
+                transition: width 1s;
+            }
+            input[type=text]:focus{
+                width: 100%;
+            }
+            input[type=Password] {
+                font-size: 15px;
+
+                width: 40%;
+                height: 20%;
+
+                padding: 12px;
+                
+                margin: 8px 0;
+
+                box-shadow: 2px 2px 5px black;
+                
+                display: inline-block;
+                
+                border: 3px;
+                border-style: hidden hidden hidden solid;
+                border-color: black;
+                border-radius: 3px;
+                
+                box-sizing: border-box;
+
+                transition: width 1s;
+            }
+            input[type=Password]:focus{
+                width: 100%;
+            }
+
+            #Cas_Log{
+                position: relative;
+                left: -22%;
+
+
+                color: black;
+                font-size: 15px;
+                margin-top: 10px;
+                
+                font-weight: 0px;
+                transition: font-size 1s,left 0.5s;
+            }
+            #Cas_Log:hover{
+                left: -16%;
+                font-size:  20px;
+            }
+
+            .res{
+                position: relative;
+                left: -50%;
+            }
