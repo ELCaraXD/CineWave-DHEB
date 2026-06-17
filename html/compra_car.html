@@ -176,7 +176,10 @@
 
     <body>
         <div id="login">
-            <form method = 'Post' action = '../php/ApagarFilmes.php'>
+
+            <!-- guarda essas infos nao servem pra nada ja que so apaga os filmes -->
+            <!-- porem esta funcioando -->
+            <form method = 'Post' action = '../php/ApagarFilmes.php'> <!-- chama o php de apagar os filmes -->
                 Nome Completo: <br/><input type = 'text' name = 'Nome' id="nome"><br/>
                 CPF: <br/><input type = 'text'  name = 'CPF' maxlength="14" id="cpf"><br/>
                 Endereço: <br/><input  type = 'text'  name = 'End'><br/>
@@ -191,6 +194,7 @@
 
         </div>
         <script>
+            //javascript pra deixar as coisas bonitinhas
             
             document.getElementById("cpf").addEventListener("input", function() {
                 let valor = this.value.replace(/\D/g, '');

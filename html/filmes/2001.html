@@ -6,17 +6,24 @@
     </head>
 
     <body style="background-image: url(capas/2001.png);">
+        <!-- botao pra voltar -->
+         <!-- usa o <a hre> e a div dentro para transformar a div em botao -->
         <a href="../../index.php">
-        <div id="voltar">
-            Voltar
-        </div>
+            <div id="voltar">
+                Voltar
+            </div>
         </a>
 
+
+        <!-- botao que vai pra pagina de compra -->
         <a href="../compra.html" id="botComp"></a>
+        
+        <!-- fazendo botao com php pra falar que agora eu tenho esse filme na session -->
         <form method = 'Post' action = '../../php/carrinho.php'>
             <button type="submit" id="botCar" value = 'salvar' name = 'Odise'>Login</button>
         </form>
         
+        <!-- div pra colocar as infos do filme -->
         <div id="Status">
            <h style="font-size: xx-large;margin: 0px -20px 0px 10px;">8,3</h>
            <a style="font-size: x-large;">

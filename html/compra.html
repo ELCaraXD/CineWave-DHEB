@@ -176,6 +176,8 @@
 
     <body>
         <div id="login">
+
+            <!-- Esse aqui relmente e util pqp ele salva oque tem e manda pra registrar a compra -->
             <form method = 'Post' action = '../php/register2.php'>
                 Nome Completo: <br/><input type = 'text' name = 'Nome' id="nome"><br/>
                 CPF: <br/><input type = 'text'  name = 'CPF' maxlength="14" id="cpf"><br/>
@@ -191,6 +193,8 @@
 
         </div>
         <script>
+
+            //deixar as informaçoes bonitinhas
             
             document.getElementById("cpf").addEventListener("input", function() {
                 let valor = this.value.replace(/\D/g, '');

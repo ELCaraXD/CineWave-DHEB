@@ -1,5 +1,7 @@
-setInterval(conte, 10);
+setInterval(conte, 10); //a cada 10 milesimus eu rodo a funcao conte
 
+
+        //essa funcao so serve pra ficar colocando as coisas uma por cima da outra
         function conte(){
             
             let conteudo = window.location.hash
@@ -73,6 +75,7 @@ setInterval(conte, 10);
             }
         }
 
+        //aqui eu deixo as coisas dos elenco, infos, sinopse e etc trocando de cor quando clico
         document.querySelectorAll("#Menu a").forEach(link => {
             link.onclick = function(){
                 document

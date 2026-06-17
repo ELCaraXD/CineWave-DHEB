@@ -1,5 +1,5 @@
 <?php  
-session_start();
+session_start();  //Iniciando a sessao para conferir se o usuario esta logado ou não
 ?>
 
 <html>
@@ -165,10 +165,15 @@ session_start();
     </head>
 
     <body>
-        <div id="navibar">
+
+        <div id="navibar"> <!--Navibar com o usuario e o sair, que so aparecem se estiver logado-->
             <a href="html/Carrinho.php" id="nav"></a>
             <a href="php/sair.php" id="Sair"> <img src='html/imgGe/Sair.svg' style='width:20px;'> </a>
         </div>
+
+            <!-- lugar para colocar os filmes por categoria-->
+            <!-- cada "<a href>" serve para transformar a capa do filme em botao assim redirecionando para o filme -->
+            <!-- o ' class="Mold" ' serve para todas as capas terem as mesmas caracteristicas so lembra da calculadora e os botoes  -->
             <div class="Categs" style="background-image: url('html/imgGe/drama.png');">
                 Drama
                 <a href="html/filmes/drama.html" class="Mold" style="background-image: url(html/Capas/Dram.png); left: 20%; "></a>        
@@ -216,26 +221,46 @@ session_start();
 
         <script>
 
-        document.addEventListener("DOMContentLoaded", function () {
+
+        //esse negocio embaixo serve pra, toda hora que a pagina abrir eu executo a função
+        document.addEventListener("DOMContentLoaded", function () { //ver se a pagina abriu
+            //função
+
+
+            // aqui eu to vendo se o rapaz esta logado ou nao
+            // esse ' echo $_SESSION['Logado'] ' ta vendo se o rapaz esta logado e se estiver
+            // a variavel logado recebe ok, caso nao recebe nada por isso ''
             let logado = "<?php echo $_SESSION['Logado'] ?? ''; ?>";;
+
+            //aqui em vez de ver se ele ta logado eu pego o nome de quem ta logado
             let nome = "<?php echo $_SESSION['Nome'] ?? ''; ?>";
+
+            //essas duas eu so to pegando a div da navibar
             let nav = document.getElementById("nav")
             let sair = document.getElementById("Sair")
             
             
-            
+            //se eu nao estiver logado eu coloco na div da navi "cadastrar e logar"
             nav.innerHTML =  "<img src='html/imgGe/Homen.svg' style='width:20px; margin-right:10px;'>" + " - Log/Res - " + "<img src='html/imgGe/Mulher.svg' style='width:20px; margin-left:10px;'>";
             nav.style.backgroundImage = "none";
 
+            //perguntando se o logado ta ok ou nao.
             if (logado == 'ok'){
+
+                //trocando a div de cadastrar para carrinho o colocando o nome do usuario
                 nav.innerHTML = nome + " - Carrinho";
                 nav.style.backgroundImage = "url('html/imgGe/Carrinho.svg')";
                 
                 nav.style.left = "30%";
 
+                //deixando o botao de sair aparecendo
                 sair.style.display = "flex"
             }else{
+                //deixando o botao de sair invisivel
                 sair.style.display = "none"
+
+                //esse ' sair.style.display = "none" ' eu pego a div e muda o seu css pelo java
+                //posso fazer isso com qualquer coisa do css
             }
         });
 

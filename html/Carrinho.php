@@ -1,5 +1,12 @@
 <?php 
+
+    //inicio a sessao
     session_start();
+    
+    //pergunta se o cara ta logado ou nao
+    //faz isso pq pode ser que ele venha pra ca sem ta logado
+    //e se isso acontecer ele vai pra aba de login
+    //isso e uma gambiarra que deu certo
     if($_SESSION['Logado'] != 'ok'){
         header('Location: login.html');
         exit;
@@ -242,16 +249,21 @@
     </head>
 
     <body>
+        <!-- botao pra voltar pro index -->
         <a href="../index.php" id="voltar">
             Voltar
         </a>
 
         
+        <!-- aqui deixa vazio pq vai usar o javascript pra colocar o nome de quem ta logado dentro -->
         <div id="moldUsu"></div>
         
+        <!-- cria um botao que chama o php de apagar todos os filmes -->
         <form method = 'Post' action = '../php/ApagarFilmes.php'>
             <button type="submit" id="Apag" value = 'Salvar' name = 'apag'>Apagar Carrinho</button>
         </form>
+
+        <!-- botao pra ir pra pagina de comprar carrinho que no final so apaga tbm -->
         <a id="Comp" href="compra_car.html">Comprar carrinho</a>
 
         <div class="moldCat" style=" left:-30%; top:-3%">Carrinho</div>
@@ -259,13 +271,28 @@
         
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
+  
+        //mesma função que toda vez que a pagina abrir eu inicio
+        document.addEventListener("DOMContentLoaded", function () { 
 
+            //ver se ta logado e salvar na variavel
+            //oque vendo agora parece burrice pq ja vejo isso em cima
+            //mas ta funcionando
             let logado = "<?php echo $_SESSION['Logado'] ?? ''; ?>";
+            //pegando o nome do cara pelo sesseion do php e colocando na variavel
             let nome = "<?php echo $_SESSION['Nome'] ?? ''; ?>";
+
+            //pegando a div pra colocar o nome do cara
             let usu = document.getElementById("moldUsu");
+            //pegando a div do carrinho pra colocar os filmes dentro
             let carri = document.getElementById("Carri");
             
+            //aqui pra baixo e a mesma burrice do php
+            //daria pra usar um for pra ver td
+            //so que teria que mudar e ir testando
+            //mas resumindo issso pega cada session de filme
+            //e coloca dentro da variavel
+            //serve pra depois eu ver se tenho ou nao o filme
             let Cmh10 = "<?php echo $_SESSION['cmh10'] ?? ''; ?>";
             let Hate = "<?php echo $_SESSION['Hate'] ?? ''; ?>";
             let Odise = "<?php echo $_SESSION['Odise'] ?? ''; ?>";
@@ -287,9 +314,13 @@
             let Missa2 = "<?php echo $_SESSION['Missa2'] ?? ''; ?>";
             let Rambo = "<?php echo $_SESSION['Rambo'] ?? ''; ?>";
             let Tele = "<?php echo $_SESSION['Tele'] ?? ''; ?>";
-            
+        
+            //coloca o nome do cara na div do nome
             usu.innerHTML = nome;
 
+            //burrice dos if
+            //se tiver o filme entao coloco ele no carrinho
+            //porem e uma burrice que funciona ent  ok
             if (Cmh10 == 'ok'){
                 carri.innerHTML += '<a href="filmes/cmh10.html" class="Mold" style="background-image: url(Capas/Ch10.png);border-radius: 20px; ;left: 20%; "></a>';
             };
