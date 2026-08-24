@@ -16,6 +16,7 @@ CREATE TABLE filmes (
     lancamento DATE,
     direcao VARCHAR(100),
     avaliacao DECIMAL(10,2)
+    valor DECIMAL(10,2)
 );
 
 CREATE TABLE compra (
